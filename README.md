@@ -1,7 +1,9 @@
-# Machine-Learning-Prediction-Model-Deployment
-This is a classification problem where we need to predict the probability of a person loan getting approved or not based on the past information of the person.
+#Loan-Status-Prediction-Model-and-Deployment-Using-Flask-and-Heroku
+Dream Housing Finance company deals in all home loans. They have presence across all urban, semi urban and rural areas. Customer first apply for home loan after that company validates the customer eligibility for loan.
 
-I applied Logistic Regression algorithm to this problem, deployed using flask and  Heroku
+Company wants to automate the loan eligibility process (real time) based on customer detail provided while filling online application form. These details are Gender, Marital Status, Education, Number of Dependents, Income, Loan Amount, Credit History and others. To automate this process, they have given a problem to identify the customers segments, those are eligible for loan amount so that they can specifically target these customers.
+
+I used Logistic Regression algorithm to build the machine learning model and deployed it using flask and  Heroku
 
 
 # The Heroku link
