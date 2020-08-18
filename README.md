@@ -8,7 +8,7 @@ I used Logistic Regression algorithm to build the machine learning model and dep
 
 
 # The Heroku link
-https://loanpredictionmodel-api.herokuapp.com
+ https://loanstatusprediction-app.herokuapp.com
 
 
 
