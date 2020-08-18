@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="static/style.css">  
+    <title>loan app</title>
+  </head>
+  
+  <body>
+    
+<div class="container main">
+  <div class="jumbotron" id="holder">
+     <br>
+       <center><b>{{ prediction_text}}</b></center> 
+     <br>
+     <br>
+    <center><h1 class='main_heading'> Loan Approval Prediction Model</h1></center>
+    <p>This Web Based Application is processed by a Machine Learning Algorithm to  predict whether a loan would be approved or not. [Note that this model is 83% accurate]</p>
+    <br>
+    <div class="instructions">
+      <h2>Instructions: </h2>
+      <p>1. Please Enter values for the following fields</p>
+      <p>2. click predict  [NOTE: 0 means No while 1 means Yes]</p>
+    </div>
+
+    <form class="form-horizontal" action="{{ url_for('predict')}}"method="post">
+
+      <div class="form-group">
+        <div class="col-sm-10">
+          <input  class="form-control" type= "text" name="ApplicantIncome" placeholder="Your Income" required="required" />
+        </div>
+      </div>
+     
+      <div class="form-group">
+        <div class="col-sm-10">
+          <input  class="form-control" type="text" name="CoaplicantIncome" placeholder="Co-applicant(garantor)Income" required="required" />
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="col-sm-10">
+          <input  class="form-control" type="text" name="LoanAmount" placeholder="Loan Amount" required="required" />
+        </div>
+      </div>
+      
+      
+      <div class="form-group">
+        <div class="col-sm-10">
+          <select class="form-control" type="number" name="Loan_Amount_Term" required="required">
+                <option value="0">loan term:</option>
+                <option value="240">6 months</option>
+                <option value="360">12 months</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="col-sm-10">
+          <select class="form-control" type="number"  name="Credit_History" required="required">
+                <option value="0">Credit History:</option>
+                <option value="1">yes</option>
+                <option value="0">no</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="col-sm-10">
+          <select class="form-control" type="number" name="Self_Employed" required="required">
+                <option value="0">Self Employed:</option>
+                <option value="1">yes</option>
+                <option value="0">no</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="col-sm-10">
+          <select class="form-control" type="number" name="Property_Area" required="required">
+                <option value="0">Property_Area:</option>
+                <option value="2">urban</option>
+                <option value="1">semiurban</option>
+                <option value="0">rural</option>
+          </select>
+        </div>
+      </div>
+
+       <div class="form-group">
+        <div class="col-sm-10">
+          <select class="form-control" type="number"  name="Married" required="required">
+                <option value="0">Married:</option>
+                <option value="1">yes</option>
+                <option value="0">no</option>
+          </select>
+        </div>
+      </div>
+
+       <div class="form-group">
+        <div class="col-sm-10">
+          <select class="form-control" type="number"  name="Education" required="required">
+                <option value="0">Education:</option>
+                <option value="1">Graduate</option>
+                <option value="0">not Graduate</option>
+          </select>
+        </div>
+      </div>
+    
+       <div class="form-group">
+        <div class="col-sm-10">
+          <select class="form-control" type="number"  name="Gender" required="required">
+                <option value="0">Gender:</option>
+                <option value="1">male</option>
+                <option value="0">female</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+         <center><button type="submit" class="button btn btn-default">PREDICT</button><center/>
+        </div>
+      </div>
+    </form>
+
+    
+
+    <h2 class="result"></h2>
+  </div>
+  </div>
+
+  </body>
+</html>
