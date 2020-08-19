@@ -9,6 +9,9 @@ I used Logistic Regression algorithm to build the machine learning model and dep
 
 # The Heroku link
  https://loanstatusprediction-app.herokuapp.com
+ 
+ # An Article on how to deployloy a machine learning model on a flask app and herou
+ https://abucynthia.hashnode.dev/how-to-deploy-a-machine-learnng-model-on-a-flask-app-and-heroku-cke1eul1l00i4vls1ac6ohyok
 
 
 
